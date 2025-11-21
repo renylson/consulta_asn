@@ -1,0 +1,162 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 25px;
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #4169e1;
+    margin: 20px 0;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #dcdcdc;
+}
+
+form {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #dcdcdc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #4169e1;
+    color: #dcdcdc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #3652b4;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #555;
+}
+
+th {
+    background-color: #333;
+    color: #dcdcdc;
+}
+
+td {
+    background-color: #2e2e2e;
+}
+
+tr:nth-child(even) td {
+    background-color: #333;
+}
+
+.error {
+    color: #ff4d4d;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4169e1;
+    color: #dcdcdc;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #3652b4;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #dcdcdc;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    input[type="submit"] {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+
+    .logo {
+        max-width: 90%;
+    }
+
+    table, th, td {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    input[type="submit"] {
+        padding: 12px;
+        font-size: 0.8em;
+    }
+
+    .logo {
+        max-width: 100%;
+    }
+}

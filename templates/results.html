@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados da Consulta - ConsultaASN - Renylson Marques</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="/static/logo.png" alt="Logo" class="logo">
+        <h1>Resultados da Consulta</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>IP</th>
+                    <th>ASN</th>
+                    <th>Hostname</th>
+                    <th>Cidade</th>
+                    <th>Região</th>
+                    <th>País</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                    {% if result.error %}
+                        <tr>
+                            <td colspan="6" class="error">{{ result.error }}</td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td>{{ result.ip }}</td>
+                            <td>{{ result.org }}</td>
+                            <td>{{ result.hostname }}</td>
+                            <td>{{ result.city }}</td>
+                            <td>{{ result.region }}</td>
+                            <td>{{ result.country }}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/" class="back-button">Voltar</a>
+        <footer>
+            Desenvolvido por: Renylson Marques / (87) 98846-3681
+        </footer>
+    </div>
+</body>
+</html>

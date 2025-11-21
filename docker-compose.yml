@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  asn-lookup:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: asn-lookup-app
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    # Para desenvolvimento, descomente a linha abaixo
+    # volumes:
+    #   - .:/app
+    networks:
+      - asn-network
+
+networks:
+  asn-network:
+    driver: bridge
